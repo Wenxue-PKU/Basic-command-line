@@ -11,3 +11,6 @@ prefetch SRA_id -O /path/to/sra
 
 #从集群向服务器远程传输文件
 scp ./file zhaowx@hostname:path/to/derectory
+
+#conda create environment -p path/to/derectory python=version
+conda create --prefix=/lustre/user/liclab/zhaowx/tools/conda/hicpro python=2.7
