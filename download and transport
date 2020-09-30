@@ -1,0 +1,13 @@
+#!bin/bash
+
+# export software path to the environment
+export PATH=$PATH:/lustre/user/liclab/zhaowx/tools/$software
+
+#wget下载
+wget -P /path/to/directory ftp://ftp.sra.ebi.ac.uk/vol1/srr/SRR260/007/SRR2601737
+
+#prefetch下载
+prefetch SRA_id -O /path/to/sra
+
+#从集群向服务器远程传输文件
+scp ./file zhaowx@hostname:path/to/derectory
