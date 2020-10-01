@@ -1,0 +1,2 @@
+计算
+samtools mpileup -f reference.fa $bam_dir/$sample >mpileup/$sample.mpileup
