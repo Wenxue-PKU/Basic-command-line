@@ -14,3 +14,23 @@ scp ./file zhaowx@hostname:path/to/derectory
 
 #conda create environment -p path/to/derectory python=version
 conda create --prefix=/lustre/user/liclab/zhaowx/tools/conda/hicpro python=2.7
+
+# -n 打印出行数 | tail –n 输出后三行 | 输出后三行的第一行
+cat –n dd.out | tail –n 3 | head –n 1
+
+#source某个工具
+source path/to/app
+
+#比较文件差别
+diff
+
+#打印test.txt的第二列
+sort -gk2 test.txt | awk '{print$2}'
+
+#建立软链接
+ln -s 源文件夹 目标文件夹
+
+#压缩/解压缩
+tar -zcvf 
+tar -zxvf
+
