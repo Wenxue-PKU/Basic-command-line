@@ -1,2 +1,4 @@
 计算
-samtools mpileup -f reference.fa $bam_dir/$sample >mpileup/$sample.mpileup
+samtools mpileup -f /lustre/user/liclab/publicData/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa $bam_dir/$sample > mpileup/$sample.mpileup
+
+qualimap bamqc -bam very_large_alignment.bam --java-mem-size=4G
