@@ -1,4 +1,6 @@
-计算
+#计算测序深度和覆盖度
 samtools mpileup -f /lustre/user/liclab/publicData/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa $bam_dir/$sample > mpileup/$sample.mpileup
-
 qualimap bamqc -bam very_large_alignment.bam --java-mem-size=4G
+
+#取出fastq文件的一部分用于测试（比如前7000行）
+zcat SRR10540097_1_val_1.fq.gz | sed -n '1,7000'p > SRR10540097_1_val_1.fq
