@@ -15,6 +15,9 @@ scp ./file zhaowx@hostname:path/to/derectory
 #conda create environment -p path/to/derectory python=version
 conda create --prefix=/lustre/user/liclab/zhaowx/tools/conda/hicpro python=2.7
 
+#conda install 在指定路径下安装
+conda install -p /lustre/user/liclab/zhaowx/tools/conda/hicpro -c bioconda bx-python
+
 # -n 打印出行数 | tail –n 输出后三行 | 输出后三行的第一行
 cat –n dd.out | tail –n 3 | head –n 1
 
