@@ -37,3 +37,49 @@ ln -s 源文件夹 目标文件夹
 tar -zcvf 
 tar -zxvf
 
+
+#vi中途退出到外部命令
+!pwd
+#通配符
+^行首 $行尾 *所有字符（包括空） ?单个字符  !非   ’ 变量名 ’  
+ll | grep "^-" | wc -l #统计文件个数
+#输出
+grep –B10 GGG test.txt 
+
+(cat 1tce.pdb) | grep ARG | while read line ;do echo "zhaowx "$line ;done
+
+cat 1tce.pdb | sed -e 's/ARG/ALA/g' | grep ARG
+find /path/to/lib -name file_name
+
+(cat 1tce.pdb) | grep ARG | while read line ;do echo "zhaowx "$line ;done
+
+cat 1tce.pdb | sed -e 's/ARG/ALA/g' | grep ARG
+find /path/to/lib -name file_name
+
+#看程序在哪个cpu上跑
+cpuidp
+
+#vi块（block）操作
+命令模式下用/ ARG可以查找ARG所在位置
+Contrl+V 进入块操作
+cat 1tce.pdb | grep ARG |sed -e "s/ARG/$a/g"
+#打印1tce.pdb文件最后一列
+cat 1tce.pdb | awk '{print $NF}' | more
+#打印1tce.pdb文件第四列
+cat 1tce.pdb | awk '{print $4}' | more
+
+#debug节点上运行命令可以看到程序需要的内存数量
+-w指定节点提交
+提交脚本命令的时候要加 ./ 
+-c 占内存
+-n 并行命令核心数
+&可以并行处理多个样本
+
+screen –S yourname #新建一个你的名字的session
+
+ssh c07n02n04  #登录到某个节点
+free –g #看内存
+pstree -apnh JOBID      #查看任务多线程/多进程
+pip install –user mpi4py   #安装mpi4py这个库
+squene | more   #查看任务号、分区、user time node等信息
+sjob JOBID    #查看任务详细信息（root权限可查看脚本）
