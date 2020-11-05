@@ -31,7 +31,9 @@ diff
 sort -gk2 test.txt | awk '{print$2}'
 
 #建立软链接
-ln -s 源文件夹 目标文件夹
+ln -s 源文件（夹） 目标文件（夹）
+ln -s ln -s /lustre/user/liclab/zhaowx/NuMA/AID/AID-1_combined_R1.fastq.gz .
+#在当前文件夹下就会出现一个同名文件，并且建立了软连接AID-1_combined_R1.fastq.gz -> /lustre/user/liclab/zhaowx/NuMA/AID/AID-1_combined_R1.fastq.gz
 
 #压缩/解压缩
 tar -zcvf 
